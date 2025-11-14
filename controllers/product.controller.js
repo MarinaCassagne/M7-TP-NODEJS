@@ -21,7 +21,7 @@ app.post(ROUTES.createProduct, (req, res) => {
             const PRODUCT = new PRODUCT(req.body) // créé une instance style new PRODUCT(req.body)
 
             //Sauvegarder les données du body pour créer un produit
-            const ARTICLE = await PRODUCT.create()
+            const ARTICLE = PRODUCT.create()
 
             res.status(201).send(`${req.url} : le produit a été créé.`);
 
