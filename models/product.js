@@ -21,8 +21,10 @@ const blog = new Schema({
   timestamps: true
 });
 */
+import mongoose from 'mongoose';
+const {Schema, model} = mongoose;
 
-const PRODUCT = new Schema({
+const PRODUCTSCHEMA = new Schema({
     
     name: {
         type: String,
@@ -65,4 +67,7 @@ Les modèles utilisent votre schéma et l'appliquent à chaque document de leur 
 Ils sont responsables de toutes les interactions entre les documents, telles que les opérations de création, de lecture, de mise à jour et de suppression (CRUD).
 
 */
+
+const PRODUCT = model("PRODUCT", PRODUCTSCHEMA);
+export default PRODUCT; //vs module.exports = PRODUCT;
 
