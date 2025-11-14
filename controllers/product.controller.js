@@ -16,13 +16,15 @@ const ROUTES = require("./routes/product.routes");
 app.post(ROUTES.createProduct, (req, res) => {
     try {
         // Création d'un produit à partir des données du body
-            // Récupérer les données du body
-            const PRODUCT = req.body.PRODUCT // créé une instance style new PRODUCT(req.body)
-            //Sauvegarder les données du body pour créer un produit
+            
+        // Récupérer les données du body
+            const PRODUCT = new PRODUCT(req.body) // créé une instance style new PRODUCT(req.body)
 
+            //Sauvegarder les données du body pour créer un produit
             const ARTICLE = await PRODUCT.create()
 
             res.status(201).send(`${req.url} : le produit a été créé.`);
+            
     } catch (error) {
     res.status(400).send(`${req.url}La requête n’a pas pu être comprise par le serveur en raison d’une syntaxe incorrecte. Le client ne doit pas répéter la requête sans modification.`);
     }  

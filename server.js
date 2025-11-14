@@ -4,7 +4,26 @@ import 'dotenv/config';
 
 // Connecter à MongoDB
 import mongoose from 'mongoose';
-mongoose.connect("mongodb+srv://marinacassagne_db_user:YPSQVFronLSXy6qr@tpnodejs.bviawx9.mongodb.net/");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
