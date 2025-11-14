@@ -24,7 +24,7 @@ app.post(ROUTES.createProduct, (req, res) => {
             const ARTICLE = await PRODUCT.create()
 
             res.status(201).send(`${req.url} : le produit a été créé.`);
-            
+
     } catch (error) {
     res.status(400).send(`${req.url}La requête n’a pas pu être comprise par le serveur en raison d’une syntaxe incorrecte. Le client ne doit pas répéter la requête sans modification.`);
     }  
@@ -33,6 +33,3 @@ app.post(ROUTES.createProduct, (req, res) => {
 // 2.
 
 app.listen(3000);
-
-
-createProduct(req, res)
