@@ -4,32 +4,3 @@ import 'dotenv/config';
 
 // Connecter à MongoDB
 import mongoose from 'mongoose';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
