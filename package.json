@@ -19,7 +19,7 @@
     "url": "https://github.com/MarinaCassagne/M7-TP-NODEJS/issues"
   },
   "homepage": "https://github.com/MarinaCassagne/M7-TP-NODEJS#readme",
-  "type": "module", 
+  "type": "module",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",

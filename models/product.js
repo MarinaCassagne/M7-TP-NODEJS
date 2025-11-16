@@ -21,10 +21,9 @@ const blog = new Schema({
   timestamps: true
 });
 */
-import mongoose from 'mongoose';
-const {Schema, model} = mongoose;
+const mongooose = require('mongoose');
 
-const PRODUCTSCHEMA = new Schema({
+const productSchema = new mongoose.Schema({
     
     name: {
         type: String,
@@ -33,7 +32,6 @@ const PRODUCTSCHEMA = new Schema({
         
     description: {
         type: String,
-        required: false,
     },
 
     price: {
@@ -49,7 +47,6 @@ const PRODUCTSCHEMA = new Schema({
 
     createdAt:  {
         type: Date,
-        required: false,
         default: Date.now(),
     },
  
@@ -68,6 +65,5 @@ Ils sont responsables de toutes les interactions entre les documents, telles que
 
 */
 
-const PRODUCT = model("PRODUCT", PRODUCTSCHEMA);
-export default PRODUCT; //vs module.exports = PRODUCT;
+module.exports = mongooose.model("Product", productSchema);
 
