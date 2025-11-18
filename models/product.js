@@ -21,9 +21,11 @@ const blog = new Schema({
   timestamps: true
 });
 */
-const mongooose = require('mongoose');
 
-const productSchema = new mongoose.Schema({
+// Using ES6 imports
+import mongoose from 'mongoose';
+
+const productSchema = new Schema({
     
     name: {
         type: String,
@@ -65,5 +67,6 @@ Ils sont responsables de toutes les interactions entre les documents, telles que
 
 */
 
-module.exports = mongooose.model("Product", productSchema);
+const Product = mongoose.model("Product", productSchema);
+module.exports = Product;
 
